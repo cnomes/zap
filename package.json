@@ -11,7 +11,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "fix": "eslint src/ --fix",
+    "precommit": "NODE_ENV=production lint-staged",
+    "eslint": "eslint",
+    "prettier": "prettier"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,5 +35,12 @@
     "lint-staged": "^8.1.4",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.10.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "eslint src/ --fix",
+      "git add"
+    ]
   }
 }
