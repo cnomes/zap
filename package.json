@@ -10,6 +10,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:placeholder": "rimraf ./dist && cp -a ./placeholder/ ./dist",
     "test": "react-scripts test",
     "fix": "eslint src/ --fix",
     "precommit": "NODE_ENV=production lint-staged",
