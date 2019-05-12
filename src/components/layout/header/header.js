@@ -8,15 +8,12 @@ const Wrapper = styled.header`
 
   display: flex;
   flex-direction: row;
-`
 
-const Filler = styled.div`
-  flex: 1;
+  justify-content: flex-end;
 `
 
 export default () => (
   <Wrapper>
-    <Filler />
     <List>
       <Items.GitHub />
       <Items.Codepen />
