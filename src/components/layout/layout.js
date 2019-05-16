@@ -23,7 +23,7 @@ export default ({ element }) => (
   <Wrapper>
     <Helmet>
       {/* eslint-disable-next-line jsx-a11y/accessible-emoji*/}
-      <title> ⚡ ZAP.DEV ⚡ </title>
+      <title>ZAP⚡DEV</title>
     </Helmet>
     <Header />
     <Main>{element}</Main>
