@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Helmet } from "react-helmet"
 
-import Header from "./header"
 import Main from "./main"
 
 const Wrapper = styled.div`
@@ -25,7 +24,6 @@ export default ({ element }) => (
       {/* eslint-disable-next-line jsx-a11y/accessible-emoji*/}
       <title>ZAP⚡DEV</title>
     </Helmet>
-    <Header />
     <Main>{element}</Main>
   </Wrapper>
 )

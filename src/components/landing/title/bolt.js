@@ -2,23 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Wrapper = styled.span`
-  @keyframes groove {
-    0% {
-      color: #b5413b;
-    }
-    33% {
-      color: #f4d75a;
-    }
-    66% {
-      color: #09814a;
-    }
-    100% {
-      color: #b5413b;
-    }
-  }
-
   animation: groove 30s infinite;
-  /* animation-direction: alternate; */
 
   align-self: stretch;
   margin: 0 10px;

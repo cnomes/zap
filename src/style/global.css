@@ -1,0 +1,14 @@
+@keyframes groove {
+  0% {
+    color: #b5413b;
+  }
+  33% {
+    color: #f4d75a;
+  }
+  66% {
+    color: #09814a;
+  }
+  100% {
+    color: #b5413b;
+  }
+}
