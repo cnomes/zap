@@ -1,7 +1,7 @@
 import "normalize.css"
 
 import "./src/style/global.css"
-import Layout from "./src/components/shared/layout"
+import Layout from "./src/components/layout"
 
 export const wrapPageElement = Layout
 

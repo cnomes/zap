@@ -16,8 +16,8 @@ const Wrapper = styled.h1`
   font-size: 10em;
   height: 200px;
   @media only screen and (max-width: 700px) {
-    font-size: 3em;
-    height: 60px;
+    font-size: 5em;
+    height: 100px;
   }
 `
 

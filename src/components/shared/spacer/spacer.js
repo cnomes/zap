@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
-export default styled.div`
+const Spacer = styled.div`
   flex: 1;
 `
+
+export default Spacer

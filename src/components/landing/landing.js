@@ -7,8 +7,8 @@ import Title from "./title"
 import SubTitle from "./sub-title"
 import Header from "./header"
 
-const LandingSection = () => (
-  <Section>
+const Landing = () => (
+  <Section color="#fafafa">
     <Header />
     <Spacer />
     <Title />
@@ -17,4 +17,4 @@ const LandingSection = () => (
   </Section>
 )
 
-export default LandingSection
+export default Landing

@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   background-color: #fafafa;
 `
 
-export default ({ element }) => (
+const Layout = ({ element }) => (
   <Wrapper>
     <Helmet>
       {/* eslint-disable-next-line jsx-a11y/accessible-emoji*/}
@@ -27,3 +27,5 @@ export default ({ element }) => (
     <Main>{element}</Main>
   </Wrapper>
 )
+
+export default Layout
