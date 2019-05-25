@@ -4,9 +4,10 @@ import styled from "styled-components"
 const Hidden = styled.div`
   position: absolute;
   top: -60px;
-  width: 100%;
+  z-index: 1;
 
   box-sizing: border-box;
+  width: 100%;
   padding: 5px;
 
   text-align: center;
