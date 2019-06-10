@@ -3,7 +3,7 @@ import React from "react"
 import Item from "./item"
 
 export default () => (
-  <Item href="https://medium.com/@nomes.carlo">
+  <Item href="https://medium.com/@carlo.nomes/">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path
         fill="currentColor"
