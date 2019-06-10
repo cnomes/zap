@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Section from "common/section"
 import emojis from "common/emojis"
 import Spacer from "common/spacer"
+
 import ProfileImage from "./profile-image"
 
 const Wrapper = styled.span`
@@ -16,25 +17,20 @@ const Wrapper = styled.span`
   @media (max-aspect-ratio: 1/1), (min-width: 1000px) and (min-height: 800px) {
     flex-direction: column;
   }
+`
+
+const Text = styled.p`
+  flex: 1;
+  margin: 20px;
+  max-width: 900px;
+
+  box-sizing: border-box;
+  text-align: left;
 
   font-size: 3rem;
   @media (max-width: 500px), (max-height: 500px) {
     font-size: 1.5rem;
   }
-
-  .text-block {
-    flex: 1;
-    box-sizing: border-box;
-    margin: 20px;
-    max-width: 900px;
-  }
-`
-
-const Text = styled.span`
-  box-sizing: border-box;
-  text-align: left;
-  padding-left: ${({ indent }) => indent || 0};
-  box-decoration-break: clone;
 `
 
 const Bio = () => (
@@ -42,17 +38,13 @@ const Bio = () => (
     <Spacer />
     <Wrapper>
       <ProfileImage />
-      <div className="text-block">
-        <Text>
-          <emojis.Wave />
-          &nbsp; Hi, I'm Carlo.
-        </Text>
+      <Text>
+        <emojis.Wave />
+        &nbsp; Hi, I'm Carlo.
         <br />
-        <Text indent="25px">
-          I'm an Antwerp based developer, helping companies create amazing
-          webapps using the latest tools and techniques.
-        </Text>
-      </div>
+        I'm an Antwerp based developer, helping companies create amazing webapps
+        using the latest tools and techniques.
+      </Text>
     </Wrapper>
     <Spacer />
   </Section>

@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import profile1 from "../../images/profile-1-square.jpg"
-import profile2 from "../../images/profile-2-square.jpg"
+import profile1 from "../../images/profile-square.jpg"
 
 const clippath = `
 clip-path: polygon(
