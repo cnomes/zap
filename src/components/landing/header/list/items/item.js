@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import Button from "../../../../shared/button"
+import Button from "common/button"
 
 const ItemWrapper = styled.li`
   display: block;

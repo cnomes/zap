@@ -1,33 +1,41 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
-    title: `ZAP.DEV`,
-    description: `Portfolio site`,
-    author: `@CarloNomes`,
+    title: "ZAP.DEV",
+    description: "Portfolio site",
+    author: "@CarloNomes",
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-styled-components",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-plugin-root-import",
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        common: path.join(__dirname, "src/components/common"),
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    "gatsby-plugin-react-helmet",
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `ZAP.DEV`,
-        short_name: `ZAP.DEV`,
-        start_url: `/`,
-        background_color: `#fafafa`,
-        theme_color: `#fafafa`,
-        display: `minimal-ui`,
-        icon: `src/images/icon.png`,
+        name: "images",
+        path: path.join(__dirname, "src/images"),
       },
     },
-    `gatsby-plugin-offline`,
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "ZAP.DEV",
+        short_name: "ZAP.DEV",
+        start_url: "/",
+        background_color: "#fafafa",
+        theme_color: "#fafafa",
+        display: "minimal-ui",
+        icon: "src/images/icon.png",
+      },
+    },
+    "gatsby-plugin-offline",
   ],
 }

@@ -1,14 +1,16 @@
 import React from "react"
 
+import { Main } from "common/section"
+
 import Landing from "../components/landing"
 import Bio from "../components/bio"
 
 const IndexPage = () => {
   return (
-    <React.Fragment>
+    <Main>
       <Landing />
       <Bio />
-    </React.Fragment>
+    </Main>
   )
 }
 

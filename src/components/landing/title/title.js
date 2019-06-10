@@ -13,10 +13,10 @@ const Wrapper = styled.h1`
   justify-content: center;
   align-items: center;
 
-  font-size: 10em;
+  font-size: 10rem;
   height: 200px;
   @media only screen and (max-width: 700px) {
-    font-size: 5em;
+    font-size: 5rem;
     height: 100px;
   }
 `

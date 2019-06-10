@@ -1,4 +1,5 @@
 import React from "react"
+import emojis from "../emojis"
 import styled from "styled-components"
 
 const Hidden = styled.div`
@@ -6,25 +7,14 @@ const Hidden = styled.div`
   top: -60px;
   z-index: 1;
 
-  box-sizing: border-box;
   width: 100%;
+  height: 50px;
+  overflow: hidden;
   padding: 5px;
 
   text-align: center;
   font-size: 50px;
 `
-
-const SeeNoEvilEmoji = () => (
-  <span role="img" aria-label="See No Evil">
-    🙈
-  </span>
-)
-
-const HearNoEvilEmoji = () => (
-  <span role="img" aria-label="Hear No Evil">
-    🙉
-  </span>
-)
 
 const usePeekABoo = delay => {
   const [peekABoo, setPeekABoo] = React.useState(false)
@@ -42,7 +32,9 @@ const usePeekABoo = delay => {
 
 const PeekABoo = ({ delay = 3000 }) => {
   const peekABoo = usePeekABoo(delay)
-  return <Hidden>{peekABoo ? <HearNoEvilEmoji /> : <SeeNoEvilEmoji />}</Hidden>
+  return (
+    <Hidden>{peekABoo ? <emojis.HearNoEvil /> : <emojis.SeeNoEvil />}</Hidden>
+  )
 }
 
 export default PeekABoo

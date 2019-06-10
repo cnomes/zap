@@ -1,8 +1,8 @@
 import React from "react"
 
-import Section from "../shared/section"
-import Spacer from "../shared/spacer"
-import Arrow from "../shared/arrow"
+import Section from "common/section"
+import Spacer from "common/spacer"
+import Arrow from "common/arrow"
 
 import Title from "./title"
 import SubTitle from "./sub-title"

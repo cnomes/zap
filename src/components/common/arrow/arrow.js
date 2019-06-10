@@ -1,5 +1,15 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const jitter = keyframes`
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+`
 
 const Link = styled.a`
   position: relative;
@@ -10,20 +20,9 @@ const Link = styled.a`
   margin: 10px;
   align-self: center;
 
-  @keyframes shuffle {
-    0%,
-    100% {
-      transform: translate(0, 0);
-    }
-
-    50% {
-      transform: translate(0, 10px);
-    }
-  }
-
   svg {
     position: absolute;
-    animation: shuffle 1s ease-in-out infinite;
+    animation: ${jitter} 1s ease-in-out infinite;
 
     height: auto;
     width: 50px;
