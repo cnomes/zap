@@ -17,6 +17,7 @@ export default () => (
     <List>
       <Items.GitHub />
       <Items.Codepen />
+      <Items.Medium />
       <Items.LinkedIn />
       <Items.Instagram />
       <Items.Twitter />
