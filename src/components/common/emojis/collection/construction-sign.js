@@ -1,7 +1,7 @@
 import React from "react"
 
 const ConstructionSign = () => (
-  <span role="img" aria-label="Construction sign">
+  <span role="img" aria-label="Construction Sign">
     🚧
   </span>
 )
