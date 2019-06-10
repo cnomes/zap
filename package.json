@@ -1,5 +1,5 @@
 {
-  "name": "ZAP.DEV",
+  "name": "zap.dev",
   "private": true,
   "description": "Portfolio site for @Carlo.Nomes",
   "version": "1.0.0",
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "gatsby-plugin-root-import": "^2.0.5",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.17.0"
   },
   "keywords": [
@@ -36,7 +37,9 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "predeploy": "gatsby build",
+    "deploy": "gh-pages -d public"
   },
   "repository": {
     "type": "git",
