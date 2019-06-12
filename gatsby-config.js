@@ -32,7 +32,7 @@ module.exports = {
         start_url: "/",
         background_color: "#fafafa",
         theme_color: "#f4d75a",
-        display: "minimal-ui",
+        display: "fullscreen",
         icon: "src/images/icon.png",
       },
     },
