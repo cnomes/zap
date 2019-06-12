@@ -31,7 +31,7 @@ module.exports = {
         short_name: "ZAP.DEV",
         start_url: "/",
         background_color: "#fafafa",
-        theme_color: "#fafafa",
+        theme_color: "#f4d75a",
         display: "minimal-ui",
         icon: "src/images/icon.png",
       },

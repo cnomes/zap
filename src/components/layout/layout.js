@@ -5,8 +5,12 @@ import { Helmet } from "react-helmet"
 import PeekABoo from "common/peek-a-boo"
 
 const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;

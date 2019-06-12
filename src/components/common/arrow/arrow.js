@@ -7,15 +7,21 @@ const jitter = keyframes`
     transform: translate(0, 0);
   }
   50% {
-    transform: translate(0, 10px);
+    transform: translate(0, 25%);
   }
 `
 
 const Link = styled.a`
   position: relative;
+  overflow: hidden;
+
   height: 100px;
   width: 100px;
-  overflow: hidden;
+
+  @media (max-width: 700px), (max-height: 700px) {
+    height: 50px;
+    width: 50px;
+  }
 
   margin: 10px;
   align-self: center;
@@ -25,13 +31,13 @@ const Link = styled.a`
     animation: ${jitter} 1s ease-in-out infinite;
 
     height: auto;
-    width: 50px;
-    left: 25px;
+    width: 50%;
+    left: 25%;
 
     color: #333333;
 
     &:first-child {
-      top: 25px;
+      top: 25%;
       animation-delay: 50ms;
     }
   }

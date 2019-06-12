@@ -15,9 +15,26 @@ const Wrapper = styled.h1`
 
   font-size: 10rem;
   height: 200px;
-  @media only screen and (max-width: 700px) {
+
+  @media (max-width: 700px), (max-height: 700px) {
+    font-size: 7rem;
+    height: 140px;
+  }
+  @media (max-width: 600px), (max-height: 600px) {
+    font-size: 6rem;
+    height: 120px;
+  }
+  @media (max-width: 500px), (max-height: 500px) {
     font-size: 5rem;
     height: 100px;
+  }
+  @media (max-width: 400px), (max-height: 400px) {
+    font-size: 4rem;
+    height: 80px;
+  }
+  @media (max-width: 300px), (max-height: 300px) {
+    font-size: 3rem;
+    height: 60px;
   }
 `
 

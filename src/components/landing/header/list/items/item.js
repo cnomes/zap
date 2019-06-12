@@ -6,7 +6,7 @@ import Button from "common/button"
 const ItemWrapper = styled.li`
   display: block;
   text-decoration: none;
-  margin-right: 10px;
+  margin: 5px;
 `
 
 const Item = ({ href = "", children }) => (
