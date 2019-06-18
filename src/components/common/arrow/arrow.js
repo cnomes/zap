@@ -59,7 +59,7 @@ const ChevronDown = () => (
 )
 
 const Arrow = props => (
-  <Link {...props}>
+  <Link aria-label="Next section" {...props}>
     <ChevronDown />
     <ChevronDown />
   </Link>

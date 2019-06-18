@@ -3,7 +3,7 @@ import React from "react"
 import Item from "./item"
 
 export default () => (
-  <Item href="https://www.instagram.com/carlo.nomes/">
+  <Item href="https://www.instagram.com/carlo.nomes/" aria-label="Instagram">
     <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
       <path
         fill="currentColor"

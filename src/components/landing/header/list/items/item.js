@@ -9,16 +9,15 @@ const ItemWrapper = styled.li`
   margin: 5px;
 `
 
-const Item = ({ href = "", children }) => (
+const Item = props => (
   <ItemWrapper>
     <Button.Link
-      href={href}
+      href=""
       target="_blank"
       rel="noopener noreferrer"
       size="40px"
-    >
-      {children}
-    </Button.Link>
+      {...props}
+    />
   </ItemWrapper>
 )
 
