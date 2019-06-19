@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import profile1 from "../../images/profile-square.jpg"
+import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const clippath = `
 clip-path: polygon(
@@ -15,45 +16,31 @@ clip-path: polygon(
   17% 12%
 );
 `
-const ColorOverlay = styled.div`
-  background-color: rgba(244, 215, 90, 0.2);
-  z-index: 1;
-`
 
-const Image = styled.div`
-  background-image: url(${profile1});
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  filter: saturate(17%) brightness(105%) contrast(215%);
-
-  ${clippath};
-`
-
-const Wrapper = styled.div`
-  position: relative;
-  > * {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+const StyledImage = styled(Img)`
   margin: 20px;
 
-  width: ${({ size }) => size};
-  height: ${({ size }) => size};
-
   ${clippath};
+  filter: saturate(17%) brightness(105%) contrast(215%);
 `
 
-const ProfileImage = ({ size = "150px", ...props }) => (
-  <Wrapper size={size} {...props}>
-    <ColorOverlay />
-    <Image />
-  </Wrapper>
+const ProfileImage = props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        file(relativePath: { eq: "profile-square.jpg" }) {
+          childImageSharp {
+            fixed(width: 150, height: 150) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <StyledImage fixed={data.file.childImageSharp.fixed} {...props} />
+    )}
+  />
 )
 
 export default ProfileImage
