@@ -49,7 +49,7 @@ const MainContainer = props => {
   const debouncedSetHashToScroll = debounce(setHashToScroll, 100)
 
   React.useEffect(setScrollToHash)
-  window.onhashchange = setScrollToHash
+  if (typeof window !== "undefined") window.onhashchange = setScrollToHash
 
   return (
     <SectionContext.Provider value={{ registerSection }}>
