@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { useSection } from "./main"
+import { useSectionContext } from "./section-container"
 
 const Section = styled.section`
   width: 100%;
@@ -24,7 +24,7 @@ const SectionWrapper = props => {
       "props.id can't change after initialisation of Section component"
     )
 
-  const { registerSection } = useSection()
+  const { registerSection } = useSectionContext()
   const [node, setRef] = React.useState(null)
 
   React.useEffect(() => {

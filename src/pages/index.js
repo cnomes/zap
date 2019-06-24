@@ -1,16 +1,16 @@
 import React from "react"
 
-import { Main } from "common/section"
+import { SectionContainer } from "common/section"
 
 import Landing from "../components/landing"
 import Bio from "../components/bio"
 
 const IndexPage = () => {
   return (
-    <Main>
+    <SectionContainer>
       <Landing />
       <Bio />
-    </Main>
+    </SectionContainer>
   )
 }
 

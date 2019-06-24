@@ -1,5 +1,5 @@
-import Main from "./main"
+import SectionContainer from "./section-container"
 import Section from "./section"
 
-export { Main }
+export { SectionContainer }
 export default Section
