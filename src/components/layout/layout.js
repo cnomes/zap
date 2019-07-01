@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Helmet } from "react-helmet"
 
-import PeekABoo from "common/peek-a-boo"
-
 const Wrapper = styled.div`
   position: absolute;
   top: 0;
@@ -26,7 +24,6 @@ const Wrapper = styled.div`
 
 const Layout = ({ element }) => (
   <Wrapper>
-    <PeekABoo />
     <Helmet>
       <meta
         name="Description"
