@@ -1,6 +1,8 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import { Helmet } from "react-helmet"
+
+import theme from "./theme.json"
 
 const Wrapper = styled.div`
   position: absolute;
@@ -13,27 +15,24 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  font-family: "Source Sans Pro", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  color: #333333;
-
-  background-color: #fafafa;
+  font: ${({ theme }) => theme.font.base};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const Layout = ({ element }) => (
-  <Wrapper>
-    <Helmet>
-      <meta
-        name="Description"
-        content="Lightning fast development and design."
-      />
-      {/* eslint-disable-next-line jsx-a11y/accessible-emoji*/}
-      <title>ZAP⚡DEV</title>
-    </Helmet>
-    {element}
-  </Wrapper>
+  <ThemeProvider theme={theme}>
+    <Wrapper>
+      <Helmet>
+        <meta
+          name="Description"
+          content="Lightning fast development and design."
+        />
+        {/* eslint-disable-next-line jsx-a11y/accessible-emoji*/}
+        <title>ZAP⚡DEV</title>
+      </Helmet>
+      {element}
+    </Wrapper>
+  </ThemeProvider>
 )
 
 export default Layout
