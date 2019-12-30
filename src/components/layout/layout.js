@@ -20,19 +20,19 @@ const Wrapper = styled.div`
 `
 
 const Layout = ({ element }) => (
-  <ThemeProvider theme={theme}>
-    <Wrapper>
-      <Helmet>
-        <meta
-          name="Description"
-          content="Lightning fast development and design."
-        />
-        {/* eslint-disable-next-line jsx-a11y/accessible-emoji*/}
-        <title>ZAP⚡DEV</title>
-      </Helmet>
-      {element}
-    </Wrapper>
-  </ThemeProvider>
+  <>
+    <Helmet>
+      <meta
+        name="Description"
+        content="Lightning fast development and design."
+      />
+      {/* eslint-disable-next-line jsx-a11y/accessible-emoji*/}
+      <title>ZAP⚡DEV</title>
+    </Helmet>
+    <ThemeProvider theme={theme}>
+      <Wrapper>{element}</Wrapper>
+    </ThemeProvider>
+  </>
 )
 
 export default Layout
